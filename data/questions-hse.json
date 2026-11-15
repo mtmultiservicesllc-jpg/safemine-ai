@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "category": "Consignation & Énergie (LOTO)",
+    "difficulty": "hard",
+    "topic": "Procédure de Cadenassage et Déconsignation",
+    "stem": "Un technicien de maintenance mécanique doit remplacer un rouleau défectueux sur le convoyeur principal de minerai de fer du site de Simandou. Avant toute intervention physique sur l'équipement, quelle est la séquence obligatoire selon les standards HSE internationaux (Rio Tinto / WCS) ?",
+    "options": {
+      "A": "Arrêter le convoyeur au bouton d'arrêt d'urgence local et commencer immédiatement le démontage",
+      "B": "Appliquer la procédure LOTO : couper l'interrupteur sectionneur principal, poser son cadenas personnel et son étiquette, dissiper l'énergie résiduelle et tester l'absence d'énergie (Essai de redémarrage zéro)",
+      "C": "Demander à son binôme de surveiller le pupitre de commande pendant l'intervention",
+      "D": "Porter des gants anticoupure et débrancher le moteur sans consigner l'armoire électrique"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "La consignation LOTO (Lock-Out / Tag-Out) exige l'isolation physique de la source d'énergie, le cadenassage individuel avec étiquetage nominatif, la purge de toute énergie résiduelle (gravité, hydraulique, électrique) et la vérification absolue du 'Zéro Énergie' avant tout contact.",
+      "A": "Incorrect : Un arrêt d'urgence n'est pas un dispositif d'isolation homologué pour intervenir mécaniquement sur une machine.",
+      "B": "Correct : C'est la règle d'or vitale pour éliminer tout risque de happement mortel lors des opérations de maintenance.",
+      "C": "Incorrect : La surveillance humaine ne remplace en aucun cas un verrouillage mécanique par cadenas personnel.",
+      "D": "Incorrect : Les EPI ne protègent pas contre un redémarrage intempestif ou un écrasement par engin lourd."
+    },
+    "safety_tip": "Une personne, un cadenas, une vie : ne jamais laisser un collègue poser ou retirer votre cadenas de consignation."
+  },
+  {
+    "id": 2,
+    "category": "Conduite d'Engins Miniers",
+    "difficulty": "medium",
+    "topic": "Angles Morts et Distance de Sécurité",
+    "stem": "Sur la piste de transport de bauxite de la zone de Boké, un conducteur de véhicule léger (Pick-up 4x4) s'approche par l'arrière d'un camion-benne minier de 100 tonnes en chargement. Quelle est la règle de sécurité impérative concernant la distance et le contact visuel ?",
+    "options": {
+      "A": "Doubler immédiatement par la droite dès que la piste est dégagée",
+      "B": "Maintenir une distance minimale de 50 mètres, s'assurer d'être visible dans les rétroviseurs du dumper et établir un contact radio VHF avant tout dépassement",
+      "C": "Se positionner à moins de 5 mètres pour profiter de l'éclairage arrière du camion",
+      "D": "Klaxonner en continu jusqu'à ce que le chauffeur du tombereau s'arrête"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Les camions tombereaux miniers ont des angles morts géants pouvant dépasser 20 mètres à l'arrière et sur les côtés. La collision entre engin lourd et véhicule léger est l'une des premières causes de mortalité sur les chantiers miniers en Guinée.",
+      "A": "Incorrect : Le dépassement à l'aveugle sans confirmation radio est une faute grave entraînant le retrait immédiat du badge de site.",
+      "B": "Correct : Le contact radio VHF et le respect strict des zones d'angles morts garantissent la séparation physique des flux.",
+      "C": "Incorrect : À 5 mètres, le pick-up est totalement invisible pour le conducteur du dumper, risque d'écrasement mortel.",
+      "D": "Incorrect : Dans la cabine insonorisée du dumper, le klaxon d'un 4x4 est inaudible au milieu du bruit du moteur."
+    },
+    "safety_tip": "Si vous ne voyez pas les rétroviseurs du conducteur de l'engin minier, soyez certain qu'il ne vous voit pas non plus."
+  },
+  {
+    "id": 3,
+    "category": "Travaux en Hauteur & Échafaudages",
+    "difficulty": "hard",
+    "topic": "Harnais de Sécurité et Ligne de Vie",
+    "stem": "Lors du montage de la structure métallique d'un silo de stockage à une hauteur de 6 mètres, quelle est l'exigence minimale concernant le système antichute individuel ?",
+    "options": {
+      "A": "Une simple ceinture de maintien attachée à un tuyau de tuyauterie",
+      "B": "Le port d'un harnais de sécurité intégral avec longe double munie d'un absorbeur d'énergie, accroché à un point d'ancrage certifié à 100% du temps (règle des 2 mousquetons)",
+      "C": "Le port du casque et des chaussures de sécurité suffit si la météo est clémente",
+      "D": "S'attacher uniquement lorsque l'on ressent un étourdissement ou du vent fort"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Au-delà de 1,80 m sans garde-corps conforme, le travail en hauteur exige obligatoirement un harnais complet 4 points avec longe double à absorbeur, assurant un ancrage permanent à 100% lors des déplacements.",
+      "A": "Incorrect : Les ceintures simples provoquent des traumatismes abdominaux et asphyxies en cas de chute.",
+      "B": "Correct : La règle du double mousqueton garantit qu'au moins un point d'ancrage reste verrouillé en permanence.",
+      "C": "Incorrect : Le casque ne retient pas un travailleur qui chute de 6 mètres.",
+      "D": "Incorrect : La protection antichute doit être continue dès l'accès à la zone surélevée."
+    },
+    "safety_tip": "Toujours vérifier la date de validité et l'absence de déchirure sur les sangles de son harnais avant de monter."
+  },
+  {
+    "id": 4,
+    "category": "Espaces Confinés & Gaz Toxiques",
+    "difficulty": "hard",
+    "topic": "Autorisation de Pénétration et Détection",
+    "stem": "Une équipe doit pénétrer à l'intérieur d'une cuve de décantation de bauxite pour des opérations de curage et de nettoyage. Quelle mesure technique préalable est formellement requise avant toute entrée ?",
+    "options": {
+      "A": "Vérifier visuellement avec une lampe torche si l'air semble respirable",
+      "B": "Obtenir un permis de travail en espace confiné, tester l'atmosphère avec un détecteur 4 gaz étalonné (Oxygène, H2S, CO, LEL), ventiler en continu et poster un surveillant extérieur permanent",
+      "C": "Envoyer le plus jeune de l'équipe faire un premier tour rapide pour vérifier",
+      "D": "Laisser la trappe ouverte 5 minutes avant d'entrer sans équipement de mesure"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Les espaces confinés présentent des risques d'asphyxie (taux d'oxygène < 19,5%) et d'intoxication mortelle par gaz inodores. Le permis de travail, le contrôle atmosphérique et le guetteur extérieur sont non-négociables.",
+      "A": "Incorrect : La majorité des gaz mortels (comme le monoxyde de carbone) sont invisibles et inodores.",
+      "B": "Correct : Le test multi-gaz à différents niveaux (haut, milieu, bas de cuve) et le surveillant d'entrée sauvent des vies.",
+      "C": "Incorrect : Pratique interdite et criminelle, violation grave du code du travail et des normes HSE.",
+      "D": "Incorrect : Une simple ouverture sans ventilation forcée ne dissipe pas les poches de gaz lourds au fond des cuves."
+    },
+    "safety_tip": "Ne jamais entrer dans un espace confiné pour secourir un collègue évanoui sans appareil respiratoire autonome isolant (ARI)."
+  },
+  {
+    "id": 5,
+    "category": "Environnement & Déversements",
+    "difficulty": "medium",
+    "topic": "Gestion des Hydrocarbures et Produits Chimiques",
+    "stem": "Lors du ravitaillement en gasoil d'une niveleuse de piste, un raccord lâche et environ 80 litres de carburant se déversent sur le sol à proximité d'un cours d'eau. Quelle est la réaction environnementale immédiate ?",
+    "options": {
+      "A": "Recouvrir le gasoil avec de la terre rouge pour masquer la tache",
+      "B": "Déployer immédiatement le kit anti-pollution (boudins absorbants pour bloquer l'écoulement vers l'eau, buvards), couper la vanne source et alerter le superviseur environnement",
+      "C": "Arroser abondamment avec de l'eau sous pression pour disperser le carburant dans le sol",
+      "D": "Attendre l'évaporation naturelle sous le soleil tropical"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "La norme ISO 14001 et les engagements communautaires miniers imposent le confinement immédiat de tout déversement d'hydrocarbures via le kit d'urgence pour protéger les nappes phréatiques et les rivières locales.",
+      "A": "Incorrect : Enfouir des hydrocarbures pollue directement les sols et constitue une faute environnementale grave passible de sanctions.",
+      "B": "Correct : Le barrage absorbant empêche la contamination de l'eau consommée par les communautés villageoises environnantes.",
+      "C": "Incorrect : L'eau accélère la dispersion des hydrocarbures vers les cours d'eau.",
+      "D": "Incorrect : Les hydrocarbures ne s'évaporent pas entièrement et infiltrent la nappe phréatique."
+    },
+    "safety_tip": "Chaque goutte d'hydrocarbure confinée préserve l'eau des communautés locales et l'image de la compagnie minière."
+  }
+]
