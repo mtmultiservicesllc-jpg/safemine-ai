@@ -4,29 +4,73 @@
     "category": "Consignation & Énergie (LOTO)",
     "difficulty": "hard",
     "topic": "Procédure de Cadenassage et Déconsignation",
-    "stem": "Un technicien de maintenance mécanique doit remplacer un rouleau défectueux sur le convoyeur principal de minerai de fer du site de Simandou. Avant toute intervention physique sur l'équipement, quelle est la séquence obligatoire selon les standards HSE internationaux (Rio Tinto / WCS) ?",
+    "stem": "Un mécanicien doit remplacer un rouleau défectueux sur le convoyeur principal de minerai de fer du site de Simandou. Avant toute intervention physique sur l'équipement, quelle est la séquence obligatoire selon les standards HSE internationaux (Rio Tinto / WCS) ?",
     "options": {
       "A": "Arrêter le convoyeur au bouton d'arrêt d'urgence local et commencer immédiatement le démontage",
       "B": "Demander à son binôme de surveiller le pupitre de commande pendant l'intervention",
-      "C": "Appliquer la procédure LOTO : couper l'interrupteur sectionneur principal, poser son cadenas personnel et son étiquette, dissiper l'énergie résiduelle et tester l'absence d'énergie (Essai de redémarrage zéro)",
+      "C": "Appliquer la procédure LOTO : couper le sectionneur principal, poser son cadenas personnel et son étiquette, dissiper l'énergie résiduelle et tester l'absence d'énergie (Essai de redémarrage zéro)",
       "D": "Porter des gants anticoupure et débrancher le moteur sans consigner l'armoire électrique"
     },
     "correct_answer": "C",
     "rationale": {
-      "correct": "La consignation LOTO (Lock-Out / Tag-Out) exige l'isolation physique de la source d'énergie, le cadenassage individuel avec étiquetage nominatif, la purge de toute énergie résiduelle (gravité, hydraulique, électrique) et la vérification absolue du 'Zéro Énergie' avant tout contact.",
-      "A": "Incorrect : Un arrêt d'urgence n'est pas un dispositif d'isolation homologué pour intervenir mécaniquement sur une machine.",
-      "B": "Incorrect : La surveillance humaine ne remplace en aucun cas un verrouillage mécanique par cadenas personnel.",
-      "C": "Correct : C'est la règle d'or vitale pour éliminer tout risque de happement mortel lors des opérations de maintenance.",
-      "D": "Incorrect : Les EPI ne protègent pas contre un redémarrage intempestif ou un écrasement par engin lourd."
+      "correct": "La consignation LOTO (Lock-Out / Tag-Out) exige l'isolation physique, le cadenassage nominatif individuel, la dissipation de toute énergie résiduelle et l'essai obligatoire d'énergie zéro.",
+      "A": "Incorrect : Un arrêt d'urgence n'est pas un organe d'isolement physique homologué pour intervenir mécaniquement.",
+      "B": "Incorrect : La surveillance humaine ne remplace jamais un verrouillage physique par cadenas personnel.",
+      "C": "Correct : Règle d'or vitale éliminant tout risque de happement mortel ou de redémarrage inopiné.",
+      "D": "Incorrect : Les EPI ne protègent pas contre l'électrocution ou l'écrasement mécanique."
     },
-    "safety_tip": "Une personne, un cadenas, une vie : ne jamais laisser un collègue poser ou retirer votre cadenas de consignation."
+    "safety_tip": "Une personne, un cadenas, une vie : ne jamais laisser un collègue poser ou retirer votre cadenas personnel."
   },
   {
     "id": 2,
+    "category": "Consignation & Énergie (LOTO)",
+    "difficulty": "hard",
+    "topic": "Purge des Énergies Résiduelles",
+    "stem": "Après avoir coupé l'alimentation électrique d'un vérin hydraulique d'une pelle d'extraction de 90 tonnes, le technicien s'apprête à dévisser un raccord hydraulique. Quel risque critique subsiste et quelle action s'impose ?",
+    "options": {
+      "A": "L'énergie cinétique est nulle, il peut dévisser directement avec une clé plate",
+      "B": "Une pression hydraulique résiduelle peut subsister dans les accumulateurs ; il est obligatoire de dépressuriser le circuit via les vannes de purge avant toute ouverture",
+      "C": "Le port de lunettes étanches suffit à neutraliser le danger du fluide sous pression",
+      "D": "Attendre 10 minutes que l'huile refroidisse dissipe automatiquement la pression"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "L'injection sous-cutanée de fluide hydraulique sous haute pression (souvent > 200 bars) est une urgence chirurgicale gravissime provoquant la nécrose et l'amputation.",
+      "A": "Incorrect : La coupure électrique n'élimine pas la pression hydraulique emmagasinée.",
+      "B": "Correct : La consignation des fluides impose la purge manuelle et la vérification du manomètre à 0 bar.",
+      "C": "Incorrect : Le jet peut traverser la peau et les vêtements de protection standards.",
+      "D": "Incorrect : La pression hydraulique ne s'échappe pas avec le simple refroidissement."
+    },
+    "safety_tip": "Considérer chaque flexible hydraulique comme sous pression jusqu'à purge vérifiée au manomètre."
+  },
+  {
+    "id": 3,
+    "category": "Consignation & Énergie (LOTO)",
+    "difficulty": "medium",
+    "topic": "Transfert de Cadenas et Changement de Quart",
+    "stem": "Lors du changement d'équipe de 18h sur l'usine de concassage, une équipe de nuit prend le relais sur une intervention non terminée. Quelle est la règle stricte concernant les cadenas LOTO ?",
+    "options": {
+      "A": "L'équipe de jour laisse ses cadenas en place et remet ses clés au chef d'équipe de nuit",
+      "B": "Passage de témoin en présence physique : l'agent de jour retire son cadenas et l'agent de nuit pose immédiatement son propre cadenas personnel avant toute reprise des travaux",
+      "C": "Le chef de quart peut couper les cadenas de jour à la disqueuse dès la fin du poste",
+      "D": "Un seul cadenas collectif pour l'ensemble du site dispense de cadenas individuels"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Chaque travailleur doit être protégé exclusivement par son propre cadenas dont il est le seul détenteur de la clé unique.",
+      "A": "Incorrect : Donner ses clés enfreint le principe fondamental de sécurité individuelle.",
+      "B": "Correct : La passation de cadenas 1-pour-1 en vis-à-vis garantit une continuité de protection sans interruption.",
+      "C": "Incorrect : Le découpage de cadenas obéit à un protocole d'urgence exceptionnel signé par le Directeur de site.",
+      "D": "Incorrect : Les cadenas individuels restent obligatoires même en cas de boîte de consignation groupée."
+    },
+    "safety_tip": "Ne confiez jamais votre clé de cadenas LOTO à une tierce personne, même à votre supérieur hiérarchique."
+  },
+  {
+    "id": 4,
     "category": "Conduite d'Engins Miniers",
     "difficulty": "medium",
     "topic": "Angles Morts et Distance de Sécurité",
-    "stem": "Sur la piste de transport de bauxite de la zone de Boké, un conducteur de véhicule léger (Pick-up 4x4) s'approche par l'arrière d'un camion-benne minier de 100 tonnes en chargement. Quelle est la règle de sécurité impérative concernant la distance et le contact visuel ?",
+    "stem": "Sur la piste de transport de bauxite de Boké, un conducteur de pick-up 4x4 s'approche par l'arrière d'un camion-benne minier de 100 tonnes en chargement. Quelle est la règle de sécurité impérative ?",
     "options": {
       "A": "Maintenir une distance minimale de 50 mètres, s'assurer d'être visible dans les rétroviseurs du dumper et établir un contact radio VHF avant tout dépassement",
       "B": "Doubler immédiatement par la droite dès que la piste semble dégagée",
@@ -35,78 +79,474 @@
     },
     "correct_answer": "A",
     "rationale": {
-      "correct": "Les camions tombereaux miniers ont des angles morts géants pouvant dépasser 20 mètres à l'arrière et sur les côtés. La collision entre engin lourd et véhicule léger est l'une des premières causes de mortalité sur les chantiers miniers en Guinée.",
-      "A": "Correct : Le contact radio VHF et le respect strict des zones d'angles morts garantissent la séparation physique des flux.",
-      "B": "Incorrect : Le dépassement à l'aveugle sans confirmation radio est une faute grave entraînant le retrait immédiat du badge de site.",
-      "C": "Incorrect : À 5 mètres, le pick-up est totalement invisible pour le conducteur du dumper, risque d'écrasement mortel.",
-      "D": "Incorrect : Dans la cabine insonorisée du dumper, le klaxon d'un 4x4 est inaudible au milieu du bruit du moteur."
+      "correct": "Les tombereaux miniers ont des angles morts massifs pouvant dépasser 20 à 30 mètres à l'arrière. La collision engin lourd / véhicule léger est la première cause de mortalité sur mine.",
+      "A": "Correct : Le contact radio VHF et le respect scrupuleux des zones visibles garantissent la séparation physique des flux.",
+      "B": "Incorrect : Le dépassement à l'aveugle sans confirmation radio est une faute lourde éliminatoire.",
+      "C": "Incorrect : À 5 mètres, le véhicule léger est totalement invisible et court à l'écrasement.",
+      "D": "Incorrect : Le klaxon d'un véhicule léger est totalement inaudible dans la cabine pressurisée d'un dumper."
     },
-    "safety_tip": "Si vous ne voyez pas les rétroviseurs du conducteur de l'engin minier, soyez certain qu'il ne vous voit pas non plus."
-  },
-  {
-    "id": 3,
-    "category": "Travaux en Hauteur & Échafaudages",
-    "difficulty": "hard",
-    "topic": "Harnais de Sécurité et Ligne de Vie",
-    "stem": "Lors du montage de la structure métallique d'un silo de stockage à une hauteur de 6 mètres, quelle est l'exigence minimale concernant le système antichute individuel ?",
-    "options": {
-      "A": "Une simple ceinture de maintien attachée à un tuyau de tuyauterie",
-      "B": "Le port du casque et des chaussures de sécurité suffit si la météo est clémente",
-      "C": "S'attacher uniquement lorsque l'on ressent un étourdissement ou du vent fort",
-      "D": "Le port d'un harnais de sécurité intégral avec longe double munie d'un absorbeur d'énergie, accroché à un point d'ancrage certifié à 100% du temps (règle des 2 mousquetons)"
-    },
-    "correct_answer": "D",
-    "rationale": {
-      "correct": "Au-delà de 1,80 m sans garde-corps conforme, le travail en hauteur exige obligatoirement un harnais complet 4 points avec longe double à absorbeur, assurant un ancrage permanent à 100% lors des déplacements.",
-      "A": "Incorrect : Les ceintures simples provoquent des traumatismes abdominaux et asphyxies en cas de chute.",
-      "B": "Incorrect : Le casque ne retient pas un travailleur qui chute de 6 mètres.",
-      "C": "Incorrect : La protection antichute doit être continue dès l'accès à la zone surélevée.",
-      "D": "Correct : La règle du double mousqueton garantit qu'au moins un point d'ancrage reste verrouillé en permanence."
-    },
-    "safety_tip": "Toujours vérifier la date de validité et l'absence de déchirure sur les sangles de son harnais avant de monter."
-  },
-  {
-    "id": 4,
-    "category": "Espaces Confinés & Gaz Toxiques",
-    "difficulty": "hard",
-    "topic": "Autorisation de Pénétration et Détection",
-    "stem": "Une équipe doit pénétrer à l'intérieur d'une cuve de décantation de bauxite pour des opérations de curage et de nettoyage. Quelle mesure technique préalable est formellement requise avant toute entrée ?",
-    "options": {
-      "A": "Vérifier visuellement avec une lampe torche si l'air semble respirable",
-      "B": "Obtenir un permis de travail en espace confiné, tester l'atmosphère avec un détecteur 4 gaz étalonné (Oxygène, H2S, CO, LEL), ventiler en continu et poster un surveillant extérieur permanent",
-      "C": "Envoyer le plus jeune de l'équipe faire un premier tour rapide pour vérifier",
-      "D": "Laisser la trappe ouverte 5 minutes avant d'entrer sans équipement de mesure"
-    },
-    "correct_answer": "B",
-    "rationale": {
-      "correct": "Les espaces confinés présentent des risques d'asphyxie (taux d'oxygène < 19,5%) et d'intoxication mortelle par gaz inodores. Le permis de travail, le contrôle atmosphérique et le guetteur extérieur sont non-négociables.",
-      "A": "Incorrect : La majorité des gaz mortels (comme le monoxyde de carbone) sont invisibles et inodores.",
-      "B": "Correct : Le test multi-gaz à différents niveaux (haut, milieu, bas de cuve) et le surveillant d'entrée sauvent des vies.",
-      "C": "Incorrect : Pratique interdite et criminelle, violation grave du code du travail et des normes HSE.",
-      "D": "Incorrect : Une simple ouverture sans ventilation forcée ne dissipe pas les poches de gaz lourds au fond des cuves."
-    },
-    "safety_tip": "Ne jamais entrer dans un espace confiné pour secourir un collègue évanoui sans appareil respiratoire autonome isolant (ARI)."
+    "safety_tip": "Si vous ne voyez pas les rétroviseurs du conducteur du dumper, soyez certain qu'il ne vous voit pas non plus."
   },
   {
     "id": 5,
-    "category": "Environnement & Déversements",
+    "category": "Conduite d'Engins Miniers",
+    "difficulty": "hard",
+    "topic": "Circulation sur Piste Dégradée et Saison des Pluies",
+    "stem": "En pleine saison des pluies en Guinée, une piste minière latéritique devient extrêmement glissante. Un dumper chargé de minerai amorce une descente avec une pente de 8%. Quelle technique de conduite s'impose ?",
+    "options": {
+      "A": "Mettre la boîte de vitesses au point mort pour économiser le carburant et freiner brusquement au frein à pied",
+      "B": "Enclencher le ralentisseur hydraulique/électrique (retarder), engager un rapport de vitesse bas adapté et ne jamais bloquer les roues de service",
+      "C": "Accélérer pour traverser la zone boueuse le plus rapidement possible par inertie",
+      "D": "Descendre en marche arrière pour maintenir le poids sur le pont directeur"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Sur sol meuble ou latérite mouillée, le frein de service bloque les roues et entraîne le glissement incontrôlé en lacet (jackknifing). Le ralentisseur maintient une vitesse constante sans blocage.",
+      "A": "Incorrect : Mettre au point mort prive le véhicule de frein moteur et mène à l'emballement mortel.",
+      "B": "Correct : Utilisation prioritaire du ralentisseur combinée à une vitesse d'approche réduite.",
+      "C": "Incorrect : La vitesse excessive multiplie la distance de dérapage par quatre.",
+      "D": "Incorrect : Manœuvre totalement proscrite et suicidaire sur rampe minière."
+    },
+    "safety_tip": "Sur piste glissante, la vitesse de descente doit être telle qu'aucun coup de frein brusque ne soit nécessaire."
+  },
+  {
+    "id": 6,
+    "category": "Conduite d'Engins Miniers",
     "difficulty": "medium",
-    "topic": "Gestion des Hydrocarbures et Produits Chimiques",
+    "topic": "Stationnement et Merlons de Sécurité",
+    "stem": "Quel est le protocole obligatoire pour stationner un engin de terrassement ou un tombereau minier sur une zone de décharge ou le long d'une piste ?",
+    "options": {
+      "A": "Laisser le moteur tourner pour maintenir la climatisation et serrer uniquement le frein à main",
+      "B": "Stationner parallèlement à la pente sans cales pour repartir plus vite",
+      "C": "Braquer les roues vers le talus ou le merlon de sécurité, abaisser la benne/lame au sol, couper le moteur, serrer le frein de parc et placer les cales de roues",
+      "D": "Stationner au milieu de la voie de circulation avec les feux de détresse allumés"
+    },
+    "correct_answer": "C",
+    "rationale": {
+      "correct": "L'ancrage au sol de l'outil (lame, godet, benne) et le braquage vers un obstacle fixe éliminent tout risque de roulement accidentel en cas de défaillance des freins.",
+      "A": "Incorrect : Risque de desserrage hydraulique des freins avec moteur tournant sans surveillance.",
+      "B": "Incorrect : Stationner dans le sens de la pente sans cales crée un risque d'emballement gravissime.",
+      "C": "Correct : C'est le standard international universel d'arrêt complet sur site minier.",
+      "D": "Incorrect : Obstruction majeure de la piste créant un risque de collision arrière à haute vitesse."
+    },
+    "safety_tip": "Outil au sol, coupe-circuit activé et cales posées : les trois gestes incontournables du stationnement minier."
+  },
+  {
+    "id": 7,
+    "category": "Travaux en Hauteur & Échafaudages",
+    "difficulty": "hard",
+    "topic": "Système Antichute et Tirant d'Air",
+    "stem": "Lors du montage de la charpente d'un silo de minerai à 6 mètres de hauteur, un monteur utilise un harnais avec longe double de 2 mètres et absorbeur d'énergie. Que représente le 'tirant d'air' et pourquoi est-il vital ?",
+    "options": {
+      "A": "Le débit d'air nécessaire pour ventiler la zone de travail en hauteur",
+      "B": "La hauteur libre minimale requise sous les pieds du travailleur pour éviter qu'il ne heurte le sol avant l'arrêt complet de la chute",
+      "C": "La distance horizontale maximale autorisée pour se déplacer le long du garde-corps",
+      "D": "Le niveau de pression du vent au-delà duquel il faut interrompre le chantier"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Le tirant d'air calcule : Longueur longe (2m) + Déploiement absorbeur (1,75m) + Taille travailleur sous point d'attache (1,5m) + Marge de sécurité (1m) = ~6,25m. À 6m, une longe de 2m ne retient pas l'ouvrier avant l'impact au sol !",
+      "A": "Incorrect : Définition erronée confondue avec la ventilation des espaces confinés.",
+      "B": "Correct : C'est la distance d'arrêt libre indispensable. Si le tirant d'air est insuffisant, il faut un enrouleur à rappel automatique.",
+      "C": "Incorrect : Il ne s'agit pas d'une distance latérale de déplacement.",
+      "D": "Incorrect : Le vent concerne l'anémomètre de grue, pas le tirant d'air antichute."
+    },
+    "safety_tip": "Vérifiez toujours votre tirant d'air : avoir un harnais ne sert à rien si la longe touche le sol avant de vous arrêter."
+  },
+  {
+    "id": 8,
+    "category": "Travaux en Hauteur & Échafaudages",
+    "difficulty": "medium",
+    "topic": "Conformité et Réception d'Échafaudage (Scafftag)",
+    "stem": "Avant de monter sur un échafaudage tubulaire pour des travaux de soudure sur la structure du concasseur, que doit impérativement vérifier l'ouvrier à l'accès ?",
+    "options": {
+      "A": "Vérifier que les tubes semblent droits à l'œil nu et monter sans attendre",
+      "B": "Présence de l'étiquette verte (Scafftag) à jour, signée par l'inspecteur échafaudage certifié datant de moins de 7 jours",
+      "C": "Demander au grutier si la structure a bougé pendant la nuit",
+      "D": "Si l'étiquette est rouge, monter rapidement pour ne pas ralentir le planning"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Le Scafftag vert atteste de la stabilité, du platelage jointif, des plinthes et des garde-corps conformes. Une étiquette rouge interdit formellement tout accès sauf aux monteurs d'échafaudage.",
+      "A": "Incorrect : L'appréciation visuelle d'un non-spécialiste ne garantit aucun ancrage sécurisé.",
+      "B": "Correct : La pastille Scafftag verte à jour est l'autorisation officielle de monter.",
+      "C": "Incorrect : Le grutier n'est pas habilité à certifier un échafaudage.",
+      "D": "Incorrect : Monter sur un Scafftag rouge est une faute professionnelle grave entraînant l'expulsion du site."
+    },
+    "safety_tip": "Étiquette rouge ou absente = DANGER MORTEL, interdiction absolue de poser le pied sur l'échafaudage."
+  },
+  {
+    "id": 9,
+    "category": "Travaux en Hauteur & Échafaudages",
+    "difficulty": "hard",
+    "topic": "Règle des Deux Mousquetons (100% Attachement)",
+    "stem": "Un technicien évolue sur une passerelle temporaire sans ligne de vie continue. Quelle méthode d'ancrage doit-il impérativement appliquer lors de ses déplacements ?",
+    "options": {
+      "A": "Garder un mousqueton accroché au harnais et tenir le second dans la main",
+      "B": "Méthode d'ancrage 100% avec longe en Y : accrocher le 2e mousqueton au point suivant avant de décrocher le 1er mousqueton",
+      "C": "Décrocher les deux mousquetons pour courir plus vite vers la plateforme sécurisée",
+      "D": "Accrocher les deux mousquetons ensemble sur le même anneau ventral de son harnais"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "La règle du 100% attachement impose qu'à chaque seconde de l'évolution en hauteur, au moins un connecteur soit solidement verrouillé sur un point certifié résistant à 22 kN.",
+      "A": "Incorrect : Ne pas ancrer le mousqueton supprime toute protection en cas de trébuchement.",
+      "B": "Correct : C'est le principe d'ancrage continu alternatif qui garantit la survie.",
+      "C": "Incorrect : Risque de chute immédiate pendant le déplacement.",
+      "D": "Incorrect : S'accrocher à son propre harnais ne relie le travailleur à aucune structure porteuse."
+    },
+    "safety_tip": "Décrocher vos deux mousquetons en même temps, c'est choisir de jouer votre vie à la roulette russe."
+  },
+  {
+    "id": 10,
+    "category": "Espaces Confinés & Gaz Toxiques",
+    "difficulty": "hard",
+    "topic": "Autorisation de Pénétration et Détection 4-Gaz",
+    "stem": "Une équipe doit pénétrer à l'intérieur d'un broyeur à boulets ou d'une cuve de décantation de bauxite. Quelle mesure technique préalable est formellement requise ?",
+    "options": {
+      "A": "Vérifier avec une lampe torche si l'atmosphère semble claire et sans odeur",
+      "B": "Permis de travail en espace confiné, test 4-gaz étalonné (O2, H2S, CO, LIE) à différents niveaux, ventilation continue et guetteur extérieur permanent",
+      "C": "Envoyer l'agent le plus jeune faire un aller-retour rapide pour tester l'air",
+      "D": "Laisser la trappe ouverte 5 minutes avant d'entrer sans détecteur de gaz"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Les gaz mortels (comme le CO ou le méthane) sont inodores. Le test multi-gaz stratifié (haut, milieu, bas), la ventilation forcée et le surveillant d'entrée doté d'une radio sont obligatoires.",
+      "A": "Incorrect : La vue ne détecte aucun gaz toxique ni la déficience en oxygène.",
+      "B": "Correct : Procédure vitale non-négociable selon la norme OSHA 1910.146.",
+      "C": "Incorrect : Pratique illégale et criminelle passible de poursuites judiciaires.",
+      "D": "Incorrect : L'ouverture simple ne brasse pas les poches de gaz denses stagnantes au fond."
+    },
+    "safety_tip": "N'entrez jamais dans un espace confiné pour secourir un collègue inanimé sans appareil respiratoire autonome isolant (ARI)."
+  },
+  {
+    "id": 11,
+    "category": "Espaces Confinés & Gaz Toxiques",
+    "difficulty": "hard",
+    "topic": "Seuils Critiques en Oxygène (O2)",
+    "stem": "Lors du test atmosphérique à l'entrée d'une citerne de stockage de carburant, le détecteur affiche un taux d'oxygène de 18,5%. Quelle décision s'impose immédiatement ?",
+    "options": {
+      "A": "Autoriser l'entrée car 18,5% est très proche des 21% de l'air normal",
+      "B": "Interdiction absolue d'entrer : l'atmosphère est déficiente en oxygène (< 19,5%). Il faut ventiler à l'air frais jusqu'à rétablissement d'un taux normal (19,5% - 23,5%)",
+      "C": "Faire entrer l'ouvrier avec un masque anti-poussière FFP2",
+      "D": "Travailler par créneaux de 5 minutes avec pause au soleil"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "En dessous de 19,5% d'O2, l'hypoxie s'installe rapidement, provoquant confusion, perte de conscience subite et arrêt cardiaque en quelques minutes.",
+      "A": "Incorrect : Une baisse d'un seul pourcent d'oxygène indique la présence potentielle d'un gaz asphyxiant dangereux.",
+      "B": "Correct : Le seuil de sécurité strict international est de 19,5% à 23,5% d'oxygène.",
+      "C": "Incorrect : Un masque à poussière filtre les particules solides mais n'apporte aucun oxygène.",
+      "D": "Incorrect : L'évanouissement en milieu sous-oxygéné survient sans signe précurseur en moins de 60 secondes."
+    },
+    "safety_tip": "En dessous de 19,5% d'oxygène, le cerveau humain perd la capacité de réaliser son propre état de danger."
+  },
+  {
+    "id": 12,
+    "category": "Espaces Confinés & Gaz Toxiques",
+    "difficulty": "medium",
+    "topic": "Rôle du Surveillant d'Entrée (Guetteur / Hole Watcher)",
+    "stem": "Pendant qu'un soudeur travaille à l'intérieur d'une trémie confinée, quel est le devoir exclusif du surveillant d'entrée posté à l'extérieur ?",
+    "options": {
+      "A": "Aller chercher des pièces au magasin pour aider à avancer le travail",
+      "B": "Rester en permanence à l'entrée, maintenir le contact visuel/vocal, surveiller les conditions de sécurité et déclencher l'alarme d'urgence en cas d'anomalie",
+      "C": "Rentrer lui aussi dans la trémie pour tenir les pièces métalliques",
+      "D": "S'asseoir et regarder son téléphone si aucun bruit anormal n'est entendu"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Le surveillant d'entrée ne doit sous aucun prétexte abandonner son poste ou se distraire. Il est le seul lien de survie de l'intervenant confiné.",
+      "A": "Incorrect : Quitter le poste laisse l'ouvrier sans assistance en cas d'évanouissement brutal.",
+      "B": "Correct : Rôle dédié unique sans aucune tâche secondaire concurrente.",
+      "C": "Incorrect : Si le surveillant entre, plus personne ne gère la ligne de vie ni l'alerte extérieure.",
+      "D": "Incorrect : Vigilance continue obligatoire pour réagir dès la première seconde d'incident."
+    },
+    "safety_tip": "Le surveillant de trou ne quitte son poste que si l'espace confiné est totalement évacué."
+  },
+  {
+    "id": 13,
+    "category": "Opérations de Levage & Grutage",
+    "difficulty": "hard",
+    "topic": "Périmètre d'Exclusion et Charge Suspendue",
+    "stem": "Une grue mobile de 150 tonnes effectue le levage d'une poutre métallique de 12 tonnes sur l'atelier de maintenance de Simandou. Quelle règle protège le personnel au sol ?",
+    "options": {
+      "A": "Se tenir sous la charge avec un casque renforcé pour guider la pièce à la main",
+      "B": "Balisage strict de la zone de giration et d'évolution, interdiction absolue de se trouver sous une charge suspendue et utilisation exclusive de cordes de guidage (taglines)",
+      "C": "Seuls les superviseurs sont autorisés à marcher sous la pièce en mouvement",
+      "D": "Accélérer la cadence de levage pour minimiser le temps passé en l'air"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "La rupture mécanique d'élingue ou la défaillance hydraulique d'un treuil ne prévient pas. La charge suspendue écrase instantanément toute personne située dans son cône de chute.",
+      "A": "Incorrect : Toucher directement la charge expose à l'écrasement mortel en cas de balancement.",
+      "B": "Correct : Zone d'exclusion matérialisée par chaîne/rubalise et orientation de la charge par cordes de guidage distantes.",
+      "C": "Incorrect : La gravité s'applique à tous sans distinction de rang hiérarchique.",
+      "D": "Incorrect : Les mouvements brusques provoquent des à-coups dynamiques destructeurs pour le câble de levage."
+    },
+    "safety_tip": "Une charge suspendue n'a pas de pitié : ne marchez jamais sous une pièce en l'air, sous aucun prétexte."
+  },
+  {
+    "id": 14,
+    "category": "Opérations de Levage & Grutage",
+    "difficulty": "hard",
+    "topic": "Conditions Météorologiques et Vitesse du Vent",
+    "stem": "Sur le port minier, une opération de déchargement de structures lourdes est en cours. L'anémomètre de la grue indique des rafales de vent atteignant 45 km/h (environ 12,5 m/s). Quelle décision le chef de manœuvre doit-il prendre ?",
+    "options": {
+      "A": "Continuer en tenant fermement les pièces à plusieurs ouvriers",
+      "B": "Suspendre immédiatement le levage des pièces de grande prise au vent, descendre la flèche en position de sécurité et consulter les abaques constructeur de la grue",
+      "C": "Désactiver l'anémomètre de cabine pour éviter les sonneries d'alarme",
+      "D": "Compenser le vent en augmentant la vitesse de rotation de la tourelle"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Le vent exerce des forces latérales colossales sur les charges à grande surface (panneaux, poutres, conteneurs), capables de renverser la grue ou de rompre les câbles.",
+      "A": "Incorrect : Des ouvriers ne peuvent pas contrer une force éolienne de plusieurs tonnes.",
+      "B": "Correct : Respect strict des limites de vent du fabricant (souvent entre 38 et 45 km/h selon le profil de charge).",
+      "C": "Incorrect : Saboter les organes de sécurité est passible de sanctions pénales.",
+      "D": "Incorrect : La force centrifuge combinée au vent garantit le basculement de l'engin."
+    },
+    "safety_tip": "Quand le vent s'invite sur le chantier de levage, la seule décision intelligente est de poser la charge."
+  },
+  {
+    "id": 15,
+    "category": "Opérations de Levage & Grutage",
+    "difficulty": "medium",
+    "topic": "Contrôle et Rebut des Élingues de Levage",
+    "stem": "Avant de lever un moteur électrique, le rigger (élingueur) inspecte une élingue en sangle textile synthétique. Quelle anomalie impose son retrait immédiat et sa destruction ?",
+    "options": {
+      "A": "L'élingue est légèrement sale en surface par de la poussière de bauxite sèche",
+      "B": "Présence d'une entaille sur la lisière, brûlure chimique d'acide ou étiquette de charge maximale utile (CMU) manquante ou illisible",
+      "C": "L'élingue a une couleur violette indiquant une capacité de 1 tonne",
+      "D": "L'élingue a été achetée il y a 6 mois"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Une élingue sans étiquette de CMU ou présentant une coupure même millimétrique perd jusqu'à 80% de sa résistance nominale et peut rompre sous une charge modérée.",
+      "A": "Incorrect : La poussière superficielle ne constitue pas un critère de mise au rebut si les fibres sont intactes.",
+      "B": "Correct : Critères universels de rebut immédiat selon la norme EN 1492. L'élingue doit être coupée pour éviter toute réutilisation.",
+      "C": "Incorrect : Le violet est le code couleur normalisé pour 1 000 kg.",
+      "D": "Incorrect : L'âge ne compte pas si les inspections périodiques sont validées."
+    },
+    "safety_tip": "Élingue douteuse = élingue détruite. Coupez-la immédiatement pour sauver la vie d'un collègue."
+  },
+  {
+    "id": 16,
+    "category": "Tir de Mines & Explosifs",
+    "difficulty": "hard",
+    "topic": "Procédure d'Évacuation et Tirs de Mines (Blasting)",
+    "stem": "Sur la fosse d'extraction de Simandou, un tir de mine de production à l'ANFO est programmé à 12h00. Quel protocole de sécurité doit être rigoureusement verrouillé 30 minutes avant le tir ?",
+    "options": {
+      "A": "Chacun continue son travail jusqu'à la première détonation sonore",
+      "B": "Évacuation complète de la zone d'exclusion (rayon de sécurité minimum de 500 à 1 000 m), fermeture de toutes les pistes d'accès par des sentinelles physiques (garde-postes) et retentissement des sirènes normalisées",
+      "C": "Seuls les engins lourds restent sur la banquette pour gagner du temps",
+      "D": "Envoyer un SMS collectif sans poster de sentinelle aux barrières de piste"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Les projections de roches (flyrocks) et l'onde de choc peuvent tuer à plusieurs centaines de mètres. Le périmètre de sécurité physique gardé par sentinelles formées est obligatoire.",
+      "A": "Incorrect : Mort assurée par souffle ou projection de roche.",
+      "B": "Correct : Procédure internationale de minage : balisage, sentinelles impassibles, 3 sirènes d'alerte et tir ordonné par le boutefeu.",
+      "C": "Incorrect : Les engins sont endommagés par les impacts de roche et les vitres blindées peuvent exploser.",
+      "D": "Incorrect : La sentinelle physique empêche tout véhicule égaré de pénétrer dans le champ de tir."
+    },
+    "safety_tip": "Sentinelle de tir : ne laissez JAMAIS passer qui que ce soit, pas même le Directeur Général du site."
+  },
+  {
+    "id": 17,
+    "category": "Tir de Mines & Explosifs",
+    "difficulty": "hard",
+    "topic": "Gestion des Ratés de Tir (Misfire)",
+    "stem": "Après la mise à feu d'une volée de 40 trous de mine, le boutefeu constate que deux charges n'ont pas détoné (raté de tir ou 'misfire'). Quelle est la conduite immédiate obligatoire ?",
+    "options": {
+      "A": "Envoyer une pelle mécanique creuser immédiatement pour extraire le détonateur",
+      "B": "Respecter le délai d'attente obligatoire (minimum 30 minutes), interdire tout accès à la zone, matérialiser le périmètre de danger et traiter le raté selon la procédure officielle (re-tir ou rinçage à l'eau)",
+      "C": "Tirer sur les fils de mise à feu à la main pour récupérer l'explosif",
+      "D": "Déclarer la zone sécurisée et reprendre le chargement des camions"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Un détonateur instable ou un explosif calciné peut détoner avec retard suite à une combustion lente. L'approche d'un engin ou un choc mécanique provoque une explosion instantanée.",
+      "A": "Incorrect : Le contact de la dent du godet avec un détonateur amorcé fait exploser la pelle.",
+      "B": "Correct : Procédure stricte de confinement et neutralisation sous la direction exclusive du maître-boutefeu certifié.",
+      "C": "Incorrect : Traction interdite, risque d'amorçage par friction.",
+      "D": "Incorrect : Négligence criminelle exposant les équipes de terrassement à la mort."
+    },
+    "safety_tip": "Un trou raté est une bombe armée : considérez-le comme prêt à exploser à la moindre perturbation."
+  },
+  {
+    "id": 18,
+    "category": "Environnement & Déversements (ISO 14001)",
+    "difficulty": "medium",
+    "topic": "Gestion des Déversements d'Hydrocarbures",
     "stem": "Lors du ravitaillement en gasoil d'une niveleuse de piste, un raccord lâche et environ 80 litres de carburant se déversent sur le sol à proximité d'un cours d'eau. Quelle est la réaction environnementale immédiate ?",
     "options": {
       "A": "Déployer immédiatement le kit anti-pollution (boudins absorbants pour bloquer l'écoulement vers l'eau, buvards), couper la vanne source et alerter le superviseur environnement",
-      "B": "Recouvrir le gasoil avec de la terre rouge pour masquer la tache",
-      "C": "Arroser abondamment avec de l'eau sous pression pour disperser le carburant dans le sol",
-      "D": "Attendre l'évaporation naturelle sous le soleil tropical"
+      "B": "Recouvrir le gasoil avec de la latérite pour masquer la tache d'huile",
+      "C": "Arroser abondamment avec de l'eau sous pression pour diluer le carburant dans le sol",
+      "D": "Attendre l'évaporation naturelle sous la chaleur du soleil"
     },
     "correct_answer": "A",
     "rationale": {
-      "correct": "La norme ISO 14001 et les engagements communautaires miniers imposent le confinement immédiat de tout déversement d'hydrocarbures via le kit d'urgence pour protéger les nappes phréatiques et les rivières locales.",
-      "A": "Correct : Le barrage absorbant empêche la contamination de l'eau consommée par les communautés villageoises environnantes.",
-      "B": "Incorrect : Enfouir des hydrocarbures pollue directement les sols et constitue une faute environnementale grave passible de sanctions.",
-      "C": "Incorrect : L'eau accélère la dispersion des hydrocarbures vers les cours d'eau.",
-      "D": "Incorrect : Les hydrocarbures ne s'évaporent pas entièrement et infiltrent la nappe phréatique."
+      "correct": "La norme ISO 14001 et les engagements communautaires imposent le confinement immédiat par absorbants pour stopper l'infiltration vers les nappes phréatiques et rivières villageoises.",
+      "A": "Correct : Barrage immédiat de l'écoulement, récupération des terres polluées en fûts étanches d'hydrocarbures.",
+      "B": "Incorrect : Enfouir des hydrocarbures pollue directement les sols et constitue une faute environnementale grave.",
+      "C": "Incorrect : L'eau disperse les hydrocarbures et accélère la pollution du cours d'eau voisin.",
+      "D": "Incorrect : Les fractions lourdes du diesel ne s'évaporent pas et empoisonnent l'écosystème pendant des années."
     },
-    "safety_tip": "Chaque goutte d'hydrocarbure confinée préserve l'eau des communautés locales et l'image de la compagnie minière."
+    "safety_tip": "Chaque goutte de gasoil confinée préserve l'eau potable des communautés villageoises riveraines."
+  },
+  {
+    "id": 19,
+    "category": "Environnement & Déversements (ISO 14001)",
+    "difficulty": "hard",
+    "topic": "Gestion des Résidus et Eaux de Décantation",
+    "stem": "Sur un parc à résidus miniers (tailings dam), une inspection visuelle après un gros orage révèle une turbidité anormale et une fissure de 10 cm sur la digue de retenue. Que prescrit le protocole d'urgence ?",
+    "options": {
+      "A": "Attendre le lendemain matin pour voir si la fissure s'élargit",
+      "B": "Alerte immédiate au centre de commandement, déclenchement du plan de gestion de crise des digues de résidus, arrêt des rejets vers le bassin et évacuation des zones aval",
+      "C": "Boucher la fissure superficiellement avec des sacs de ciment sec sans avertir la direction",
+      "D": "Pomper l'eau boueuse directement dans le fleuve sans décantation préalable"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "La rupture d'une digue de résidus miniers (comme à Brumadinho ou aux normes GISTM) est la pire catastrophe industrielle minière possible, provoquant des vagues de boue destructrices et des morts massives.",
+      "A": "Incorrect : Quelques heures suffisent pour qu'une digue fragilisée cède entièrement.",
+      "B": "Correct : Application du Standard Mondial de Gestion des Résidus Miniers (GISTM) : alerte et protection des vies en aval.",
+      "C": "Incorrect : Masquer une faille structurelle sur un barrage est passible de sanctions pénales internationales.",
+      "D": "Incorrect : Destruction totale de la faune aquatique et contamination irréversible des bassins fluviaux."
+    },
+    "safety_tip": "La stabilité des digues minières ne tolère aucun compromis : signalez la moindre fissure instantanément."
+  },
+  {
+    "id": 20,
+    "category": "Sécurité Incendie & Convoyeurs",
+    "difficulty": "hard",
+    "topic": "Échauffement des Bandes Transporteuses et Câbles d'Arrêt d'Urgence",
+    "stem": "Sur un convoyeur de minerai de 3 km de long, le câble d'arrêt d'urgence à tirette (pull wire) est actionné par un agent qui aperçoit de la fumée sous un tambour de tête. Que doit-il faire ensuite ?",
+    "options": {
+      "A": "Réarmer immédiatement le câble pour éviter que l'usine ne perde sa cadence horaire",
+      "B": "Localiser la source de friction (rouleau grippé ou patinage de bande), avertir la salle de contrôle, sécuriser la zone avec un extincteur à poudre/mousse et ne réarmer qu'après inspection technique validée",
+      "C": "Verser une bouteille d'eau minérale sur la bande en mouvement pour éteindre la fumée",
+      "D": "Partir en pause en attendant que la fumée se dissipe toute seule"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Le frottement d'une bande transporteuse en caoutchouc sur un rouleau bloqué engendre une chaleur extrême capable d'enflammer des kilomètres de convoyeur en quelques minutes.",
+      "A": "Incorrect : Réarmer sans résoudre le problème relance le feu et embrase l'installation.",
+      "B": "Correct : Procédure incendie convoyeur : arrêt immédiat, vérification d'échauffement au thermomètre infrarouge et consignation.",
+      "C": "Incorrect : L'eau sur du matériel électrique sous tension présente un risque mortel d'électrocution.",
+      "D": "Incorrect : L'incendie de convoyeur est l'une des causes majeures de destruction totale d'usines minières."
+    },
+    "safety_tip": "Câble de sécurité tiré = anomalie majeure. On ne réarme JAMAIS sans être allé voir sur place."
+  },
+  {
+    "id": 21,
+    "category": "Sécurité Incendie & Convoyeurs",
+    "difficulty": "medium",
+    "topic": "Sélection des Extincteurs en Milieu Minier",
+    "stem": "Un départ de feu se déclare à l'intérieur d'un transformateur électrique haute tension 33 kV alimentant la station de concassage. Quel moyen d'extinction est formellement PROSCRIT ?",
+    "options": {
+      "A": "L'extincteur au dioxyde de carbone (CO2)",
+      "B": "L'extincteur à poudre sèche polyvalente ABC",
+      "C": "L'eau en jet plein ou lance à incendie non isolée (jet droit conducteur)",
+      "D": "Le déclenchement du système fixe d'extinction au gaz inerte"
+    },
+    "correct_answer": "C",
+    "rationale": {
+      "correct": "L'eau ordinaire conduit l'électricité. Un jet plein dirigé vers une installation haute tension crée un arc électrique qui remonte le flux d'eau et électrocute instantanément le pompier ou l'opérateur.",
+      "A": "Incorrect : Le CO2 est un gaz inerte non-conducteur parfaitement adapté aux feux électriques.",
+      "B": "Incorrect : La poudre sèche est non-conductrice et homologuée feux électriques sous tension.",
+      "C": "Correct : Danger de mort immédiat par foudroiement électrique.",
+      "D": "Incorrect : Les gaz inertes (FM-200, Inergen) étouffent le feu sans aucun danger électrique."
+    },
+    "safety_tip": "Sur une armoire ou équipement électrique : JAMAIS D'EAU. Utilisez CO2 ou Poudre."
+  },
+  {
+    "id": 22,
+    "category": "Premiers Secours & Urgences Minières",
+    "difficulty": "hard",
+    "topic": "Hémorragie Massive par Coupure ou Écrasement",
+    "stem": "Sur le chantier d'assemblage ferroviaire du Simandou, un ouvrier subit une section accidentelle de l'artère fémorale à la cuisse avec saignement en jet pulsatile rouge vif. Quel geste de premiers secours prime sur tous les autres ?",
+    "options": {
+      "A": "Lui donner à boire de l'eau sucrée pour éviter qu'il ne tombe dans les pommes",
+      "B": "Poser immédiatement un garrot tourniquet tactique homologué (CAT) au-dessus de la plaie sur la cuisse, serrer jusqu'à arrêt complet du saignement et noter l'heure de pose",
+      "C": "Désinfecter la plaie avec de l'alcool et poser un pansement adhésif simple",
+      "D": "Allonger la victime sur le ventre et lui masser le dos"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Une hémorragie artérielle massive vide le corps de son sang en moins de 3 minutes. Seul le garrot tactique serré fort en amont arrête l'hémorragie et évite le décès par choc hypovolémique.",
+      "A": "Incorrect : Ne jamais donner à boire à un blessé grave (risque d'inhalation lors de la narcose chirurgicale).",
+      "B": "Correct : Règle d'or de médecine d'urgence traumatique de combat / mine : GARROT IMMÉDIAT + HEURE DE POSE.",
+      "C": "Incorrect : Un pansement simple est instantanément traversé par un flux artériel pulsé.",
+      "D": "Incorrect : Inutile et fatal, la victime décèdera d'exsanguination en 180 secondes."
+    },
+    "safety_tip": "Saignement en jet = 3 minutes pour sauver une vie. Garrot sans hésitation, serré jusqu'à arrêt du jet."
+  },
+  {
+    "id": 23,
+    "category": "Premiers Secours & Urgences Minières",
+    "difficulty": "medium",
+    "topic": "Coup de Chaleur et Déshydratation Sévère sur Site",
+    "stem": "En pleine saison sèche sous 42°C dans une fosse de bauxite, un ferrailleur s'arrête de transpirer, a la peau brûlante et sèche, délire et perd l'équilibre. De quoi s'agit-il et que faire ?",
+    "options": {
+      "A": "Un simple coup de fatigue : lui dire de s'asseoir 5 minutes et de reprendre le travail",
+      "B": "Un coup de chaleur malin (urgence vitale) : l'amener à l'ombre fraîche, l'asperger d'eau tempérée, ventiler activement, alerter l'ambulance du site et préparer l'évacuation médicale",
+      "C": "Une crise de paludisme bénigne nécessitant seulement deux comprimés de paracétamol",
+      "D": "L'envelopper dans des couvertures de laine épaisses pour le faire transpirer"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "L'absence de transpiration avec confusion mentale signe la faillite des mécanismes de thermorégulation du corps (température centrale > 40°C). Le risque de lésions cérébrales irréversibles et de mort est immédiat.",
+      "A": "Incorrect : La poursuite de l'effort mène à l'arrêt cardio-respiratoire.",
+      "B": "Correct : Refroidissement d'urgence immédiat par évaporation d'eau et transport médicalisé prioritaire.",
+      "C": "Incorrect : Diagnostic d'urgence engagée erroné.",
+      "D": "Incorrect : Envelopper la victime enferme la chaleur et cuit littéralement les organes internes."
+    },
+    "safety_tip": "Sur les chantiers miniers en Guinée : hydratez-vous avec de l'eau et des électrolytes avant d'avoir soif."
+  },
+  {
+    "id": 24,
+    "category": "Consignation & Énergie (LOTO)",
+    "difficulty": "hard",
+    "topic": "Boîte de Consignation Groupée (Lockbox)",
+    "stem": "Sur un arrêt majeur d'usine mobilisant 40 techniciens de différents corps de métier sur un broyeur de minerai, comment est gérée la sécurité collective pour éviter la pose de 40 cadenas sur chaque sectionneur ?",
+    "options": {
+      "A": "Seul le chef d'équipe met son cadenas et les 39 autres ouvriers lui font confiance",
+      "B": "Système de boîte de consignation groupée : les clés des cadenas isolant les sources d'énergie sont placées dans une boîte fermée, et chaque intervenant pose son propre cadenas personnel sur la boîte avant d'intervenir",
+      "C": "On coupe le courant général du campement sans poser de cadenas physique",
+      "D": "On pose une simple étiquette de mise en garde en papier sur la porte de l'usine"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Tant qu'un seul travailleur a son cadenas individuel sur la boîte de consignation groupée, personne ne peut ouvrir la boîte pour récupérer les clés des sectionneurs d'énergie.",
+      "A": "Incorrect : La confiance aveugle est proscrite en sécurité industrielle.",
+      "B": "Correct : Standard international OSHA pour les arrêts majeurs de maintenance complexe.",
+      "C": "Incorrect : Une coupure globale sans verrouillage est réarmable par erreur par un tiers.",
+      "D": "Incorrect : Le tagout sans lockout n'offre aucune barrière mécanique réelle."
+    },
+    "safety_tip": "Même sur une boîte de consignation à 100 cadenas, votre cadenas personnel est votre seule garantie de vie."
+  },
+  {
+    "id": 25,
+    "category": "Conduite d'Engins Miniers",
+    "difficulty": "medium",
+    "topic": "Franchissement des Passages à Niveau Ferroviaires",
+    "stem": "Sur le corridor ferroviaire de transport de minerai de fer reliant Simandou au port en eau profonde, un chauffeur de bus transportant 30 ouvriers arrive à un passage à niveau sans barrière. Quelle est son obligation ?",
+    "options": {
+      "A": "Accélérer pour passer avant que le train minier de 10 000 tonnes ne soit visible",
+      "B": "Arrêt absolu obligatoire du véhicule, couper la radio, ouvrir les vitres pour écouter, regarder des deux côtés de la voie et ne s'engager qu'après certitude absolue de l'absence de convoi",
+      "C": "Klaxonner deux fois et traverser à vitesse normale sans s'arrêter",
+      "D": "Suivre de près le camion qui précède pour profiter de son passage"
+    },
+    "correct_answer": "B",
+    "rationale": {
+      "correct": "Un train lourd minier de minerai de fer lancé à 80 km/h pèse des dizaines de milliers de tonnes et nécessite plus de 1,5 km pour s'arrêter complètement. Il ne peut jamais éviter un véhicule sur la voie.",
+      "A": "Incorrect : Risque de collision cataclysmique pulvérisant le bus et ses 30 passagers.",
+      "B": "Correct : Procédure de sécurité ferroviaire stricte (Stop, Look, Listen).",
+      "C": "Incorrect : Le conducteur du train ne peut pas s'arrêter même s'il entend un klaxon.",
+      "D": "Incorrect : Risque d'être coincé sur la voie si le camion de devant s'arrête brusquement."
+    },
+    "safety_tip": "Face à un train minier de 10 000 tonnes, aucun véhicule n'a la priorité. Arrêt total impératif."
   }
 ]
