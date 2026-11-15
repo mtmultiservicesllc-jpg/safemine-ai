@@ -8,24 +8,32 @@ export default function Dashboard() {
   const [qLoading, setQLoading] = useState(false)
   const [answered, setAnswered] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState(null)
-  const [category, setCategory] = useState('loto')
+  const [category, setCategory] = useState('Toutes')
 
   const [stats, setStats] = useState({
     total: 0,
     correct: 0,
     byCategory: {
+      'Toutes': { total: 0, correct: 0 },
       'loto': { total: 0, correct: 0 },
       'engins': { total: 0, correct: 0 },
       'hauteur': { total: 0, correct: 0 },
       'confine': { total: 0, correct: 0 },
-      'environnement': { total: 0, correct: 0 }
+      'levage': { total: 0, correct: 0 },
+      'tir': { total: 0, correct: 0 },
+      'environnement': { total: 0, correct: 0 },
+      'incendie': { total: 0, correct: 0 },
+      'secours': { total: 0, correct: 0 }
     }
   })
 
   useEffect(() => {
     const saved = localStorage.getItem('safemine_stats')
     if (saved) {
-      try { setStats(JSON.parse(saved)) } catch (e) {}
+      try { 
+        const parsed = JSON.parse(saved)
+        setStats(prev => ({ ...prev, ...parsed, byCategory: { ...prev.byCategory, ...(parsed.byCategory || {}) } }))
+      } catch (e) {}
     }
   }, [])
 
@@ -59,6 +67,7 @@ export default function Dashboard() {
     setStats(prev => {
       const catKey = category
       const currentCat = prev.byCategory[catKey] || { total: 0, correct: 0 }
+
       const newStats = {
         total: prev.total + 1,
         correct: prev.correct + (isCorrect ? 1 : 0),
@@ -76,11 +85,16 @@ export default function Dashboard() {
   }
 
   const cats = [
-    { key:'loto', label:'Consignation & Énergie (LOTO)' },
-    { key:'engins', label:'Conduite d\'Engins Lourds (100t)' },
-    { key:'hauteur', label:'Travaux en Hauteur & Échafaudages' },
-    { key:'confine', label:'Espaces Confinés & Gaz' },
-    { key:'environnement', label:'Environnement & Hydrocarbures' },
+    { key:'Toutes', label:'🎯 Toutes les Familles de Risque (Aléatoire Global)' },
+    { key:'Consignation', label:'⚡ Consignation & Énergie (LOTO)' },
+    { key:'Engins', label:'🚜 Conduite d\'Engins Lourds & Pistes (100t)' },
+    { key:'Hauteur', label:'🏗️ Travaux en Hauteur & Échafaudages' },
+    { key:'Confinés', label:'☣️ Espaces Confinés & Gaz Toxiques (4-Gaz)' },
+    { key:'Levage', label:'🏗️ Levage, Grutage & Charges Suspendues' },
+    { key:'Tir', label:'💥 Tir de Mines, Explosifs (ANFO) & Misfires' },
+    { key:'Environnement', label:'🌿 Environnement & Hydrocarbures (ISO 14001)' },
+    { key:'Incendie', label:'🔥 Incendie & Arrêts Convoyeurs à Bande' },
+    { key:'Secours', label:'🚑 Premiers Secours Miniers & Garrot Tourniquet' }
   ]
 
   const overallRate = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0
@@ -98,10 +112,10 @@ export default function Dashboard() {
       `}</style>
 
       {/* SIDEBAR */}
-      <aside style={{ width:'260px', background:'#11161F', borderRight:'1px solid rgba(243,156,18,0.1)', padding:'24px 0', display:'flex', flexDirection:'column', flexShrink:0 }}>
+      <aside style={{ width:'270px', background:'#11161F', borderRight:'1px solid rgba(243,156,18,0.1)', padding:'24px 0', display:'flex', flexDirection:'column', flexShrink:0 }}>
         <div style={{ padding:'0 20px 24px', borderBottom:'1px solid rgba(243,156,18,0.1)', marginBottom:'16px' }}>
           <div style={{ fontSize:'20px', color:'#F1C40F', fontWeight:'700' }}>SAFEMINE<span style={{ color:'#FFFFFF' }}> AI</span></div>
-          <div style={{ fontSize:'11px', color:'#718096', marginTop:'2px' }}>Supervision Sécurité Opérationnelle</div>
+          <div style={{ fontSize:'11px', color:'#718096', marginTop:'2px' }}>Supervision Sécurité Opérationnelle (Mines)</div>
         </div>
 
         <button onClick={() => setCurrentScreen('dashboard')}
@@ -125,8 +139,8 @@ export default function Dashboard() {
         <div style={{ marginTop:'auto', padding:'16px 20px', borderTop:'1px solid rgba(243,156,18,0.1)' }}>
           <div style={{ background:'rgba(243,156,18,0.08)', border:'1px solid rgba(243,156,18,0.2)', borderRadius:'10px', padding:'12px 14px', marginBottom:'12px' }}>
             <div style={{ fontSize:'11px', color:'#A0AEC0', marginBottom:'2px' }}>Chantier Actif</div>
-            <div style={{ fontSize:'16px', fontWeight:'700', color:'#F1C40F' }}>Simandou Sud (WCS/Rio)</div>
-            <div style={{ fontSize:'11px', color:'#718096', marginTop:'4px' }}>Badge Opérateur Démo</div>
+            <div style={{ fontSize:'15px', fontWeight:'700', color:'#F1C40F' }}>Simandou (WCS / Rio Tinto)</div>
+            <div style={{ fontSize:'11px', color:'#718096', marginTop:'4px' }}>Badge Opérateur Démo Pilote</div>
           </div>
           <button onClick={() => router.push('/')}
             style={{ width:'100%', background:'transparent', border:'1px solid rgba(243,156,18,0.2)', borderRadius:'6px', padding:'8px', fontSize:'12px', color:'#A0AEC0' }}>
@@ -139,7 +153,7 @@ export default function Dashboard() {
       <main style={{ flex:1, display:'flex', flexDirection:'column', overflow:'hidden' }}>
         <header style={{ height:'64px', borderBottom:'1px solid rgba(243,156,18,0.1)', display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 32px', flexShrink:0 }}>
           <div style={{ fontSize:'14px', color:'#A0AEC0' }}>
-            Site minier : <span style={{ color:'#FFFFFF', fontWeight:'600' }}>Zone d'Extraction & Voie Ferrée</span>
+            Site minier : <span style={{ color:'#FFFFFF', fontWeight:'600' }}>Zone d'Extraction, Voie Ferrée & Terminal Portuaire</span>
           </div>
           <button onClick={() => setCurrentScreen('study')} style={{ background:'#F39C12', color:'#090B0E', border:'none', borderRadius:'8px', padding:'8px 16px', fontSize:'13px', fontWeight:'700' }}>
             + Lancer un Cas Pratique HSE
@@ -149,7 +163,7 @@ export default function Dashboard() {
         {currentScreen === 'dashboard' && (
           <div style={{ flex:1, overflowY:'auto', padding:'32px' }}>
             <h1 style={{ fontSize:'24px', fontWeight:'700', color:'#FFFFFF', marginBottom:'8px' }}>Tableau de bord de conformité HSE</h1>
-            <p style={{ color:'#A0AEC0', fontSize:'14px', marginBottom:'28px' }}>Mesure en direct du respect des règles vitales de sécurité sur site.</p>
+            <p style={{ color:'#A0AEC0', fontSize:'14px', marginBottom:'28px' }}>Mesure en direct du respect des règles vitales de sécurité sur site (25 cas industriels actifs).</p>
 
             {/* METRICS */}
             <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(200px, 1fr))', gap:'16px', marginBottom:'32px' }}>
@@ -163,30 +177,27 @@ export default function Dashboard() {
                 <div style={{ fontSize:'32px', fontWeight:'700', color: stats.total > 0 ? (overallRate >= 80 ? '#2ECC71' : '#E74C3C') : '#718096', marginTop:'8px' }}>
                   {stats.total > 0 ? `${overallRate}%` : '0%'}
                 </div>
-                <div style={{ fontSize:'11px', color:'#718096', marginTop:'4px' }}>{stats.total === 0 ? 'En attente' : (overallRate >= 80 ? 'Accès Chantier Autorisé' : 'Recyclage Requis')}</div>
+                <div style={{ fontSize:'11px', color:'#718096', marginTop:'4px' }}>Seuil critique minimum : 80%</div>
               </div>
               <div style={{ background:'#11161F', border:'1px solid rgba(243,156,18,0.12)', borderRadius:'12px', padding:'20px' }}>
-                <div style={{ color:'#A0AEC0', fontSize:'12px', textTransform:'uppercase' }}>Règle Vitale Maîtrisée</div>
-                <div style={{ fontSize:'15px', fontWeight:'700', color:'#F1C40F', marginTop:'12px' }}>Consignation LOTO</div>
-                <div style={{ fontSize:'11px', color:'#718096', marginTop:'4px' }}>Aucun incident potentiel</div>
-              </div>
-              <div style={{ background:'#11161F', border:'1px solid rgba(243,156,18,0.12)', borderRadius:'12px', padding:'20px' }}>
-                <div style={{ color:'#A0AEC0', fontSize:'12px', textTransform:'uppercase' }}>Statut Chantier</div>
-                <div style={{ fontSize:'16px', fontWeight:'700', color:'#2ECC71', marginTop:'12px' }}>ZÉRO ACCIDENT</div>
-                <div style={{ fontSize:'11px', color:'#718096', marginTop:'4px' }}>Objectif permanent HSE</div>
+                <div style={{ color:'#A0AEC0', fontSize:'12px', textTransform:'uppercase' }}>Risque d'Accident Estimé</div>
+                <div style={{ fontSize:'24px', fontWeight:'700', color: stats.total > 0 ? (overallRate >= 80 ? '#2ECC71' : '#E74C3C') : '#718096', marginTop:'12px' }}>
+                  {stats.total === 0 ? 'En attente' : (overallRate >= 80 ? 'MAÎTRISÉ (Faible)' : 'CRITIQUE (Élevé)')}
+                </div>
+                <div style={{ fontSize:'11px', color:'#718096', marginTop:'4px' }}>Normes OSHA 1910 / Rio Tinto</div>
               </div>
             </div>
 
-            {/* SECTEURS */}
-            <h2 style={{ fontSize:'18px', fontWeight:'600', color:'#FFFFFF', marginBottom:'16px' }}>Maîtrise par Risque Opérationnel</h2>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(300px, 1fr))', gap:'16px' }}>
-              {cats.map(c => {
+            {/* SECTIONS */}
+            <h2 style={{ fontSize:'18px', fontWeight:'700', color:'#FFFFFF', marginBottom:'16px' }}>Maîtrise par Famille de Risque</h2>
+            <div style={{ display:'flex', flexDirection:'column', gap:'12px' }}>
+              {cats.slice(1).map(c => {
                 const catStat = stats.byCategory[c.key] || { total: 0, correct: 0 }
                 const catRate = catStat.total > 0 ? Math.round((catStat.correct / catStat.total) * 100) : 0
                 return (
                   <div key={c.key} style={{ background:'#11161F', border:'1px solid rgba(243,156,18,0.08)', borderRadius:'10px', padding:'16px' }}>
                     <div style={{ display:'flex', justifyContent:'space-between', marginBottom:'8px' }}>
-                      <span style={{ fontSize:'14px', color:'#FFFFFF' }}>{c.label}</span>
+                      <span style={{ fontSize:'14px', fontWeight:'500', color:'#FFFFFF' }}>{c.label}</span>
                       <span style={{ fontSize:'14px', color: catStat.total > 0 ? '#F1C40F' : '#718096', fontWeight:'600' }}>
                         {catStat.total > 0 ? `${catRate}% (${catStat.correct}/${catStat.total})` : 'Non évalué'}
                       </span>
@@ -206,11 +217,11 @@ export default function Dashboard() {
             {!question && !qLoading && (
               <div style={{ background:'#11161F', border:'1px solid rgba(243,156,18,0.15)', borderRadius:'16px', padding:'32px', textAlign:'center' }}>
                 <h2 style={{ fontSize:'22px', fontWeight:'700', color:'#FFFFFF', marginBottom:'12px' }}>Simulation de Cas Concret sur Site</h2>
-                <p style={{ color:'#A0AEC0', fontSize:'14px', marginBottom:'24px' }}>Sélectionnez la famille de risque à évaluer :</p>
+                <p style={{ color:'#A0AEC0', fontSize:'14px', marginBottom:'24px' }}>Sélectionnez la famille de risque à évaluer (ou choisissez Tout le site) :</p>
 
                 <div style={{ display:'flex', gap:'16px', justifyContent:'center', marginBottom:'24px' }}>
                   <select value={category} onChange={e => setCategory(e.target.value)}
-                    style={{ background:'#19212C', color:'#FFFFFF', border:'1px solid rgba(243,156,18,0.3)', padding:'10px 16px', borderRadius:'8px', fontSize:'14px' }}>
+                    style={{ background:'#19212C', color:'#FFFFFF', border:'1px solid rgba(243,156,18,0.3)', padding:'12px 18px', borderRadius:'8px', fontSize:'14px', maxWidth:'450px', width:'100%' }}>
                     {cats.map(c => <option key={c.key} value={c.key}>{c.label}</option>)}
                   </select>
                 </div>
@@ -225,7 +236,7 @@ export default function Dashboard() {
             {qLoading && (
               <div style={{ textAlign:'center', padding:'60px 0' }}>
                 <div style={{ width:'36px', height:'36px', border:'2px solid rgba(243,156,18,0.2)', borderTopColor:'#F1C40F', borderRadius:'50%', animation:'spin 0.8s linear infinite', margin:'0 auto 16px' }}></div>
-                <p style={{ color:'#A0AEC0' }}>Chargement du scénario HSE...</p>
+                <p style={{ color:'#A0AEC0' }}>Chargement du scénario HSE critique...</p>
               </div>
             )}
 
@@ -235,7 +246,7 @@ export default function Dashboard() {
                   <span style={{ fontSize:'12px', background:'rgba(243,156,18,0.1)', color:'#F1C40F', padding:'4px 10px', borderRadius:'20px', fontWeight:'600' }}>
                     {question.topic}
                   </span>
-                  <span style={{ fontSize:'12px', color:'#718096' }}>Standard International HSE</span>
+                  <span style={{ fontSize:'12px', color:'#718096' }}>Standard International HSE Simandou</span>
                 </div>
 
                 <p style={{ fontSize:'16px', lineHeight:'1.6', color:'#FFFFFF', marginBottom:'24px' }}>
@@ -253,7 +264,7 @@ export default function Dashboard() {
                         borderCol = '#2ECC71'
                         bgCol = 'rgba(46,204,113,0.15)'
                         textCol = '#2ECC71'
-                      } else if (selectedAnswer === letter) {
+                      } else if (letter === selectedAnswer) {
                         borderCol = '#E74C3C'
                         bgCol = 'rgba(231,76,60,0.15)'
                         textCol = '#E74C3C'
@@ -262,41 +273,42 @@ export default function Dashboard() {
 
                     return (
                       <button key={letter} onClick={() => handleAnswer(letter)} disabled={answered}
-                        style={{ display:'flex', alignItems:'flex-start', gap:'14px', padding:'14px 18px', borderRadius:'10px', border:`1px solid ${borderCol}`, background: bgCol, textAlign:'left', width:'100%', color: textCol }}>
-                        <span style={{ fontWeight:'700', fontSize:'14px' }}>{letter}.</span>
-                        <span style={{ fontSize:'14px', lineHeight:'1.5' }}>{text}</span>
+                        style={{ display:'flex', alignItems:'flex-start', gap:'12px', padding:'14px 16px', borderRadius:'8px', border:`1px solid ${borderCol}`, background: bgCol, textAlign:'left', width:'100%' }}>
+                        <span style={{ fontWeight:'700', color: textCol, flexShrink:0 }}>{letter}.</span>
+                        <span style={{ color: textCol, fontSize:'14px', lineHeight:'1.4' }}>{text}</span>
                       </button>
                     )
                   })}
                 </div>
 
                 {answered && (
-                  <div style={{ background:'rgba(243,156,18,0.06)', border:'1px solid rgba(243,156,18,0.25)', borderRadius:'12px', padding:'20px', marginTop:'24px' }}>
-                    <div style={{ fontWeight:'700', color: selectedAnswer === question.correct_answer ? '#2ECC71' : '#E74C3C', marginBottom:'8px', fontSize:'15px' }}>
-                      {selectedAnswer === question.correct_answer ? '✓ Action Conforme aux Standards HSE' : '✗ Danger Immédiat / Violation Procédure'}
+                  <div style={{ background:'rgba(243,156,18,0.05)', border:'1px solid rgba(243,156,18,0.2)', borderRadius:'12px', padding:'20px', marginBottom:'24px' }}>
+                    <div style={{ fontSize:'14px', fontWeight:'700', color: selectedAnswer === question.correct_answer ? '#2ECC71' : '#E74C3C', marginBottom:'8px' }}>
+                      {selectedAnswer === question.correct_answer ? '✓ Réponse Conforme aux Normes Minières' : '✗ Risque Majeur d\'Incident Détecté'}
                     </div>
-                    <div style={{ fontSize:'14px', lineHeight:'1.6', color:'#FFFFFF', marginBottom:'16px' }}>
-                      <strong>Explication technique : </strong>{question.rationale?.correct}
-                    </div>
-
+                    <p style={{ fontSize:'14px', color:'#EAEFF5', lineHeight:'1.5', marginBottom:'12px' }}>
+                      {question.rationale?.correct}
+                    </p>
                     {question.safety_tip && (
-                      <div style={{ background:'#090B0E', borderLeft:'3px solid #F1C40F', padding:'10px 14px', borderRadius:'4px', fontSize:'13px', color:'#A0AEC0' }}>
-                        ⚠️ <strong>Règle d'or de Sauvetage :</strong> {question.safety_tip}
+                      <div style={{ background:'#19212C', borderLeft:'3px solid #F1C40F', padding:'10px 14px', borderRadius:'4px', fontSize:'13px', color:'#F1C40F' }}>
+                        🛡️ <strong>Règle d'or :</strong> {question.safety_tip}
                       </div>
                     )}
-
-                    <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:'20px' }}>
-                      <button onClick={() => setCurrentScreen('dashboard')}
-                        style={{ background:'transparent', border:'1px solid rgba(243,156,18,0.3)', color:'#A0AEC0', borderRadius:'8px', padding:'8px 16px', fontSize:'13px' }}>
-                        ← Voir le Tableau de Bord
-                      </button>
-                      <button onClick={generateQuestion}
-                        style={{ background:'#F39C12', color:'#090B0E', border:'none', borderRadius:'8px', padding:'10px 20px', fontSize:'14px', fontWeight:'700' }}>
-                        Cas Suivant ➔
-                      </button>
-                    </div>
                   </div>
                 )}
+
+                <div style={{ display:'flex', justifyContent:'space-between' }}>
+                  <button onClick={() => setQuestion(null)}
+                    style={{ background:'transparent', border:'1px solid rgba(243,156,18,0.2)', color:'#A0AEC0', padding:'10px 18px', borderRadius:'8px', fontSize:'13px' }}>
+                    Changer de Risque
+                  </button>
+                  {answered && (
+                    <button onClick={generateQuestion}
+                      style={{ background:'#F39C12', color:'#090B0E', border:'none', padding:'10px 20px', borderRadius:'8px', fontSize:'13px', fontWeight:'700' }}>
+                      Cas Suivant ➔
+                    </button>
+                  )}
+                </div>
               </div>
             )}
           </div>
